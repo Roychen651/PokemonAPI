@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Recursive:wght@300..1000&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #fceec8;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.left-content {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.right-content {
+    flex-basis: 70%;
+    text-align: center;
+    color: slateblue;
+    position: sticky;
+    top: 100px;
+    right: 10px;
+}
+
+.right-content img {
+    margin: 2rem auto;
+    height: 180px;
+}
+
+.right-content h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.abilities {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.abilities .group {
+    background-color: #da24bc;
+    color: white;
+    padding: 0.5rem;
+    font-size: 12px;
+    border-radius: 8px;
+    margin: 0.5rem;
+}
+
+.base-stat {
+    margin-top: 2rem;
+}
+
+.base-stat h3 {
+    margin: 0.5rem 0;
+}
+
+.card {
+    width: 100%;
+    background-color: #da24bc;
+    border-radius: 1rem;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.btn-group button {
+    outline: none;
+    border: none;
+    width: 150px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #06b36e;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-group button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.btn-group button:hover:not(:disabled) {
+    background-color: #04a258;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .left-content, .right-content {
+        flex-basis: 100%;
+    }
+
+    .right-content {
+        padding-left: 2rem;
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .left-content {
+        flex-basis: 40%;
+    }
+
+    .right-content {
+        flex-basis: 60%;
+    }
+
+    .right-content img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-content {
+        flex-basis: 50%;
+    }
+
+    .right-content {
+        flex-basis: 50%;
+    }
+
+    .right-content img {
+        height: 120px;
+    }
+
+    .btn-group button {
+        width: 100px;
+        font-size: 14px;
+    }
+}
