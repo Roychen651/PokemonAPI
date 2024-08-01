@@ -2,6 +2,9 @@
 
 This is a simple React application that displays Pokemon information using data fetched from the PokeAPI.
 
+[Visit the Live Site](https://thepokemonapi.netlify.app)
+
+
 ## Table of Contents
 
 - [Installation](#installation)
